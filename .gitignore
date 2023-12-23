@@ -1,0 +1,5 @@
+.idea/
+vendor/
+build/
+.env
+docker-compose.override.yml
