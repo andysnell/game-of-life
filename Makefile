@@ -38,10 +38,6 @@ bash: build
 phpunit: build
 	@$(app) composer phpunit
 
-.PHONY: phpbench
-phpbench: build
-	@$(app) composer phpbench
-
 .PHONY: psysh
 psysh: build
 	@$(app) composer psysh
@@ -61,6 +57,10 @@ phpstan: build
 .PHONY: rector
 rector: build
 	@$(app) composer rector
+
+.PHONY: rector-dry-run
+rector-dry-run: build
+	@$(app) composer rector-dry-run
 
 .PHONY: ci
 ci: build
